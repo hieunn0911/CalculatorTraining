@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDivide"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonClear"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="AC"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDivide"
+        app:layout_constraintEnd_toStartOf="@id/buttonOpposite"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOpposite"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="+/-"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDivide"
+        app:layout_constraintEnd_toStartOf="@id/buttonPercent"
+        app:layout_constraintStart_toEndOf="@id/buttonClear" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPercent"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="%"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDivide"
+        app:layout_constraintEnd_toStartOf="@id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@id/buttonOpposite" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDivide"
+        style="@style/ButtonOperatorStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@id/buttonMultiply"
+        app:layout_constraintEnd_toEndOf="@id/buttonCompare"
+        app:layout_constraintStart_toEndOf="@id/buttonPercent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSeven"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="7"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMultiply"
+        app:layout_constraintEnd_toStartOf="@id/buttonEight"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonEight"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMultiply"
+        app:layout_constraintEnd_toStartOf="@id/buttonNine"
+        app:layout_constraintStart_toEndOf="@id/buttonSeven" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNine"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMultiply"
+        app:layout_constraintEnd_toStartOf="@id/buttonMultiply"
+        app:layout_constraintStart_toEndOf="@id/buttonEight" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMultiply"
+        style="@style/ButtonOperatorStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="X"
+        app:layout_constraintBottom_toTopOf="@id/buttonMinus"
+        app:layout_constraintEnd_toEndOf="@id/buttonCompare"
+        app:layout_constraintStart_toEndOf="@id/buttonNine" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFour"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMinus"
+        app:layout_constraintEnd_toStartOf="@id/buttonFive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFive"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMinus"
+        app:layout_constraintEnd_toStartOf="@id/buttonSix"
+        app:layout_constraintStart_toEndOf="@id/buttonFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSix"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="6"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMinus"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinus"
+        app:layout_constraintStart_toEndOf="@id/buttonFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMinus"
+        style="@style/ButtonOperatorStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@id/buttonPlus"
+        app:layout_constraintEnd_toEndOf="@id/buttonCompare"
+        app:layout_constraintStart_toEndOf="@id/buttonSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOne"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPlus"
+        app:layout_constraintEnd_toStartOf="@id/buttonTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTwo"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPlus"
+        app:layout_constraintEnd_toStartOf="@id/buttonThree"
+        app:layout_constraintStart_toEndOf="@id/buttonOne" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonThree"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPlus"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@id/buttonTwo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPlus"
+        style="@style/ButtonOperatorStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@id/buttonCompare"
+        app:layout_constraintEnd_toEndOf="@id/buttonCompare"
+        app:layout_constraintStart_toEndOf="@id/buttonThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCompare"
+        style="@style/ButtonOperatorStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonDot" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDot"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/buttonThree"
+        app:layout_constraintStart_toStartOf="@id/buttonThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonZero"
+        style="@style/ButtonNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/buttonTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
